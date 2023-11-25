@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child{
+            padding: 10px;
+            width: 20%;
+            height: 200px;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        #sum{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="child">
+            <label for="" >Enter first number</label>
+            <input type="number" id="x">
+            <label for="" >Enter second number</label>
+            <input type="number" id="y">
+            <br><button type="submit" onclick="validate()">ADD</button>
+            <h3 id="sum" ></h3>
+        </div>    
+    </div>        
+
+    <script>
+
+        function validate()
+        {
+                var x = document.getElementById("x");
+                var y = document.getElementById("y");
+
+                if (x.value.trim()==""||y.value.trim()=="")
+                {
+                    alert("no blank values allowed");
+                }
+                else
+                {
+                    add();
+                }
+        } 
+
+
+
+        function add(){
+           let x = document.getElementById("x").value
+           let y = document.getElementById("y").value
+           x = parseFloat(x);
+            y = parseFloat(y);
+            let sum = x+y
+            console.log(sum)
+            document.getElementById("sum").innerHTML="Sum: " + sum;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            background-color: whitesmoke;
+            width: 40%;
+            height: 60vh;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .top-inp{
+            width: 418px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        .top{
+            width: 80%;
+            height: 60%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .bottom{
+            background-color: aliceblue;
+            width: 69%;
+            height: 25%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        button{
+            margin-top: 10px;
+            padding: 5px 174px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            background-color: rgb(12, 11, 11);
+            color: aliceblue;
+            border-radius: 5px;
+
+
+        }
+        h3{
+            align-self: baseline;
+            padding-left: 40px;
+            color: rgb(63, 65, 67);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>    EMI CALCULATOR</h1>
+            <div class="top">
+                <h3 class="head">Amount : </h3>
+                <input type="number" id="amount" class="top-inp">
+                <h3 class="head">Interest Rate : </h3>
+                <input type="number" id="interest" class="top-inp">
+                <h3 class="head">Tenure (In Months) : </h3>
+                <input type="number" id="tenure" class="top-inp">
+                <button type="submit" onclick="calculate()">CALCULATE</button>
+            </div>
+            <div class="bottom">
+                <h2>Loan EMI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id="emi">000</span></h2>
+                <h2>Total Interest : <span id="totalInterest">000</span></h2>
+                <h2>Total Amount   : <span id="totalPayment">000</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let amount = document.getElementById("amount");
+        let interest = document.getElementById("interest");
+        let tenure = document.getElementById("tenure");
+       
+        function calculate(){
+            if(amount.value.trim()==""||interest.value.trim()==""||tenure.value.trim()=="")
+            {
+                alert("Please fill the blank fields")
+            }
+            else{
+                let r = parseFloat(interest.value)/12/100;
+                let p = amount.value;
+                let n = tenure.value;
+
+                //formula EMI= (P * r * (1 + r)^n ) / ((1+r)^n - 1)
+
+                 let EMI = (p*r* Math.pow((1+r),n)) / (Math.pow((1+r),n)-1);
+                 let totalInterest =(EMI * n) - p;
+                 let totalAmount  = totalInterest + parseFloat(p);
+                 document.getElementById("emi").innerHTML = "₹ " + Math.round(EMI);
+                 document.getElementById("totalInterest").innerHTML="₹ " + Math.round(totalInterest);
+                 document.getElementById("totalPayment").innerHTML="₹ " + Math.round(totalAmount) ;
+
+                 console.log("₹" + Math.round(EMI));
+                 console.log("₹" + Math.round(totalInterest));
+                 console.log("₹" + Math.round(totalPayment));
+            }
+        }
+
+
+    </script>
+</body>
+</html>
