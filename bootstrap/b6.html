@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap task</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .header{
+          background-color: rgb(163, 218, 227);
+        }
+
+        body{
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      </style>
+</head>
+<body>
+
+    <!-- header section -->
+
+    <header class="header" style="position: fixed; width: 100%; z-index: 1;">
+        <div class="row text-white">
+            <div class="col-9 col-md-6 p-2 pl-5">
+                <img src="buildlogo.png" alt="" style="height: 3em;">
+            </div>
+            <div class="col-3 col-md-6 my-auto">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item active">
+                          <a class="nav-link text-secondary" href="#home-section">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-secondary" href="#register-section">Register</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-secondary" href="#mentors-section">Mentors</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-secondary" href="#">Participants</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- caurosel section -->
+
+    <section style="padding-top: 4rem;" id="home-section">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="carousel.png" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="carousel2.png" alt="Second slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only"></span>
+                    </a>
+                  </div>  
+            </div>
+        </div>
+    </section>
+
+    <!-- join us -->
+
+    <section class="text-center p-5" id="register-section">
+        <div class="row">
+            <div class="col-12">
+                <h2>Join Us</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>Pygrammers is a community of python enthusiasts with similar ideologies and interest</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a href="https://pygrammers.org/"><button type="button" class="btn btn-primary">Join Now</button></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- form section -->
+
+    <section class="container mb-5" style="width:32em ;">
+        <div class="row">
+            <div class="col-12">
+                <form class="border p-4  text-center ">
+                    <h3>Form</h3>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label for="inputEmail4">Name</label>
+                        <input type="text" class="form-control" id="inputEmail4" >
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label for="inputEmail4">Mobile Number</label>
+                        <input type="number" class="form-control" id="inputEmail4" >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Email Address</label>
+                      <input type="email" class="form-control" id="inputAddress"  >
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Company / Institution Name</label>
+                      <input type="text" class="form-control" id="inputAddress2" >
+                    </div>
+                    <!-- choose file -->
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1" style="color: rgb(152, 151, 151);font-size: 12px;">Upload a short video or image of hand written sheet showing you interest to join build.myweb</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    <!-- dropdown -->
+                    <div class="form-row">
+                        <div class="col-12 my-1 pt-2">
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Have you attended any events by Pygrammers before?</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-4 p-2 pl-5 pr-5" style="background-color: rgb(128, 185, 202); color: black;">Submit form</button>
+                  </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- mentors section -->
+
+    <section class="p-4 container-fluid" style="background-color: #eaf3f8;" id="mentors-section">
+        <h4 class="text-center">Mentors</h4>
+        <div class="row  ">
+            <div class="col-md-4 p-5">
+                <div class="card p-2 border-0" style="background-color: #eaf3f8;">
+                    <img src="elon_musk.jpeg" class="card-img-top img-fluid" alt="elon musk" >
+                    <div class="card-body">
+                      <p class="card-text p-2" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4 p-5" >
+                <div class="card p-2 border-0"  style="background-color: #eaf3f8;">
+                    <img src="elon_musk.jpeg" class="card-img-top img-fluid" alt="elon musk" >
+                    <div class="card-body">
+                      <p class="card-text p-2" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4 p-5" >
+                <div class="card p-2 border-0"  style="background-color: #eaf3f8;">
+                    <img src="elon_musk.jpeg" class="card-img-top img-fluid" alt="elon musk" >
+                    <div class="card-body">
+                      <p class="card-text p-2" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row  ">
+            <div class="col-md-4 p-5" >
+                <div class="card p-2 border-0"  style="background-color: #eaf3f8;">
+                    <img src="elon_musk.jpeg" class="card-img-top img-fluid" alt="elon musk" >
+                    <div class="card-body">
+                      <p class="card-text p-2" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4 p-5" >
+                <div class="card p-2 border-0"  style="background-color: #eaf3f8;">
+                    <img src="elon_musk.jpeg" class="card-img-top img-fluid" alt="elon musk" >
+                    <div class="card-body">
+                      <p class="card-text p-2" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4 p-5" >
+                <div class="card p-2 border-0"  style="background-color: #eaf3f8;">
+                    <img src="elon_musk.jpeg" class="card-img-top img-fluid" alt="elon musk" >
+                    <div class="card-body">
+                      <p class="card-text p-2" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+    <footer style="background-color:  rgb(192, 224, 228);">
+        <div class="row">
+            <div class="col-12 text-center p-2">
+                <a href=""><img src="footer.png" alt="" class="img-fluid" style="height: 3rem;"></a>
+            </div>
+        </div>
+    </footer>
+
+<!-- script fiels  -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
